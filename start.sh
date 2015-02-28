@@ -4,7 +4,7 @@
 sudo docker stop nginx
 
 # delete containers
-sudo docker ps -a | grep 'nginx' | awk '{print $1}' | xargs docker rm
+sudo docker ps -a | grep 'nginx' | awk '{print $1}' | xargs docker rm -f
 
 # start container
 sudo docker run --name nginx -d -p 80:80 controlgimnasio/nginx
